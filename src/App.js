@@ -40,7 +40,7 @@ class BooksApp extends React.Component {
           ))
         }
       })
-  }
+  };
 
   render() {
     return (
@@ -96,4 +96,4 @@ class BooksApp extends React.Component {
   }
 }
 
-export default BooksApp
+export default BooksApp;

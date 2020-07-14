@@ -8,7 +8,7 @@ class SearchBooks extends React.Component {
   static propTypes = {
     onShelfChange: PropTypes.func.isRequired,
     books: PropTypes.array.isRequired
-  }
+  };
 
   state = {
     query: '',
@@ -23,11 +23,11 @@ class SearchBooks extends React.Component {
     } else {
       this.getSearchResults(query);
     }
-  }
+  };
 
   clearResults = () => {
-    this.setState({results: []})
-  }
+    this.setState({results: []});
+  };
 
   /*
   The search results don't always have the correct shelf
@@ -39,24 +39,24 @@ class SearchBooks extends React.Component {
       return ({
         ...book,
         ...bookOnShelf
-      })
-    })
+      });
+    });
 
-    return booksWithShelf
-  }
+    return booksWithShelf;
+  };
 
   getSearchResults = (query) => {
     BooksAPI.search(query)
       .then((response) => {
         if (response.error) {
-          this.clearResults()
+          this.clearResults();
         } else {
           this.setState(() => ({
             results: this.addShelfInfo(response)
-          }))
+          }));
         }
-      })
-  }
+      });
+  };
 
   render() {
     const { query, results } = this.state;
@@ -95,8 +95,8 @@ class SearchBooks extends React.Component {
           }
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default SearchBooks
+export default SearchBooks;

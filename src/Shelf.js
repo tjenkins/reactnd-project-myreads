@@ -12,12 +12,12 @@ const Shelf = ({ name, books, onShelfChange }) => (
         />
       </div>
     </div>
-)
+);
 
 Shelf.propTypes = {
   name: PropTypes.string.isRequired,
   books: PropTypes.array.isRequired,
   onShelfChange: PropTypes.func.isRequired
-}
+};
 
-export default Shelf
+export default Shelf;
