@@ -5,12 +5,12 @@ class Book extends React.Component {
   static propTypes = {
     book: PropTypes.object.isRequired,
     onShelfChange: PropTypes.func.isRequired
-  }
+  };
 
   handleShelfChange = (e) => {
     const { book, onShelfChange } = this.props;
     onShelfChange(book, e.target.value);
-  }
+  };
 
   render() {
     const { book } = this.props;
@@ -44,4 +44,4 @@ class Book extends React.Component {
   }
 }
 
-export default Book
+export default Book;
